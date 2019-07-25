@@ -1,0 +1,14 @@
+#mysql 配置
+spring:
+  datasource:
+    #添加characterEncoding=utf-8解决数据库乱码
+    url: jdbc:mysql://localhost:3306/jingda?characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: 111111
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  #thymeleaf 配置，取消缓存，这样子就可以在只修改完html后ctrl+f9重新build一下
+  thymeleaf:
+    cache: false
+mybatis:
+  mapper-locations: classpath:/mybaits/*.xml
+  config-location:  classpath:/mybatis/mybatis-config.xml

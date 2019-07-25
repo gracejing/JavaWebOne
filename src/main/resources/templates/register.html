@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>注册</title>
+</head>
+<body>
+<!--th:action=""是thymeleaf语法，可以去学习-->
+<form th:action="@{/user/handleRegister}" method="post">
+    <label for="name">用户名</label><br />
+    <input id="name" type="text" name="name"><br />
+    <label for="sex">性别</label><br />
+    <input id="sex" type="text" name="sex"><br />
+    <label for="password">密码</label><br />
+    <input id="password" type="password" name="password"><br />
+    <label for="phone">手机号</label><br />
+    <input id="phone" type="text" name="phone"><br />
+    <button type="submit"> 注册</button>
+</form>
+</body>
+</html>
